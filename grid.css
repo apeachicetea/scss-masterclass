@@ -1,24 +1,20 @@
 .grid {
   display: grid;
   gap: 10px;
-  height: 50vh;
   font-size: 20px;
+  color: white;
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 100px);
+  /* 처음 설정했던 row보다 더 많은 row가 필요하다면 100px크키로 자동으로 생성될 것이다 */
+  /* grid-auto-rows: 150px; */
+  /* 처음 설정했던 것보다 더 많은 element가 필요하다면 row / column으로 자동으로 생성될 것이다 */
+  /* grid-auto-flow: row / column; */
 }
 
-.header {
-  background-color: violet;
-}
-
-.content {
-  background-color: red;
-}
-
-.nav {
-  background-color: yellowgreen;
-}
-
-.footer {
+.item:nth-child(odd) {
   background-color: brown;
+}
+
+.item:nth-child(even) {
+  background-color: blue;
 }
